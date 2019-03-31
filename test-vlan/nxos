@@ -1,0 +1,7 @@
+[nexus_9k_datacenter]
+NX01 ansible_host=10.0.0.10
+
+[nexus_9k_datacenter:vars]
+ansible_network_os=nxos
+ansible_user=admin
+ansible_connection=network_cli
