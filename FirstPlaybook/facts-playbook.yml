@@ -26,4 +26,4 @@
 
     - name: Display changed config
       debug: 
-        msg: "The hostname is {{ ansible_net_hostanem }} and the OS is {{ ansible_net_version }}"
+        msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
