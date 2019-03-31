@@ -13,3 +13,17 @@
     - name: Display the config
       debug:
         msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
+    
+    - name: Update the hostname
+      nxos_config: 
+        backup: yes
+        lines:
+          - hostname Changed-NXOS
+
+    - name: Get changed config for NXOS devices
+      nxos_facts:
+        gather_subset: all
+
+    - name: Display changed config
+      debug: 
+        msg: "The hostname is {{ ansible_net_hostanem }} and the OS is {{ ansible_net_version }}"
