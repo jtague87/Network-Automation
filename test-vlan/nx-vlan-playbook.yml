@@ -23,5 +23,5 @@
       nxos_l2_interface:
         aggregate:
           - { name: "Ethernet4/2", trunk_vlans: 6-30 }
-          - { name: "Ethernet4/7", trunk_vlans: 15,16 }
+          - { name: "Ethernet4/7", trunk_vlans: 15-20 }
         mode: trunk
