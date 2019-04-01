@@ -19,7 +19,7 @@
         trunk_vlans: 51-4094
         state: absent
     
-    -  name: Aggregate Configure interfaces for access_vlan with aggregate
+    - name: Aggregate Configure interfaces for access_vlan with aggregate
       nxos_l2_interface:
         aggregate:
           - { name: "Ethernet4/2", trunk_vlans: 6-30 }
