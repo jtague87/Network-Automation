@@ -19,6 +19,14 @@
         trunk_vlans: 51-4094
         state: absent
     
+    - name: Add interface using aggregate
+      nxos_interface:
+        aggregate:
+        - { name: Ethernet4/2, admin_state: down, mode: layer2 }
+        - { name: Ethernet4/7, admin_state: up, mode: layer2 }
+        state: present
+
+
     - name: Aggregate Configure interfaces for access_vlan with aggregate
       nxos_l2_interface:
         aggregate:
