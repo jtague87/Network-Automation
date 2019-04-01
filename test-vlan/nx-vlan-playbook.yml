@@ -22,7 +22,7 @@
     - name: Add interface using aggregate
       nxos_interface:
         aggregate:
-        - { name: Ethernet4/2, admin_state: down, mode: layer2 }
+        - { name: Ethernet4/2, admin_state: up, mode: layer2 }
         - { name: Ethernet4/7, admin_state: up, mode: layer2 }
         state: present
 
