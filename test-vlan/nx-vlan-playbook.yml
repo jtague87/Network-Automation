@@ -10,13 +10,13 @@
       nxos_l2_interface:
         name: Ethernet4/1
         mode: trunk
-        trunk_allowed_vlans: 2-50
+        trunk_vlans: 2-50
 
     - name: Ensure these VLANs are not being tagged on the trunk
       nxos_l2_interface:
         name: Ethernet4/1
         mode: trunk
-        trunk_allowed_vlans: 51-4094
+        trunk_vlans: 51-4094
         state: absent
     
     - name: Add interface using aggregate
@@ -30,6 +30,7 @@
     - name: Aggregate Configure interfaces for access_vlan with aggregate
       nxos_l2_interface:
         aggregate:
-          - { name: "Ethernet4/2", trunk_allowed_vlans: 6-30 }
-          - { name: "Ethernet4/7", trunk_allowed_vlans: 15-20 }
+          - { name: "Ethernet4/2", trunk_vlans: 6-30 }
+          - { name: "Ethernet4/7", trunk_vlans: 15-20 }
         mode: trunk
+        state: absent
